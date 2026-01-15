@@ -1,0 +1,256 @@
+.header{
+    overflow: visible;
+    display: flex;
+    padding: 2vw;
+    align-items: center;
+    column-gap: 4vw;
+    justify-content: space-between;
+}
+
+.header img{
+    /* Logo scales smoothly with viewport width */
+    height: clamp(70px, 18vw, 220px);
+    border-radius: 20%;
+}
+
+.header a{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: darkslategrey;
+    text-align: left;
+    margin: 1vw;
+    padding: 1.2vw 2vw;
+    line-height: 1.5;
+    display: inline-block;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+    font-size: clamp(16px, 2.8vw, 42px);
+    text-decoration: none;
+}
+
+.header a:hover{
+    background-color: orange;
+    color: white;
+    transform: translateY(-0.4rem);
+}
+
+.header a:active{
+    background-color: darkslategrey;
+    color: white;
+}
+
+section{
+    height: auto;
+    border: 0.8vw solid orange;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.titletext{
+    text-align: left;
+    position: absolute;
+    top: 20%;
+    left: 0;
+    background-color: rgba(255, 165, 0, 0.8);
+    padding: 1% 2% 1% 2%;
+}
+
+.titletext h2{
+    font-size: 2vw;
+    color: white;
+    margin-bottom: -1%;
+}
+
+.titletext h1{
+    margin-top: -1%;
+    font-size: 7vw;
+    color: white;
+    margin-bottom: auto;
+}
+
+.block1{
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    margin-top: 5%;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+.block1 img{
+    height: 30vw;
+    border-radius: 10%;
+    border: 0.8vw solid orange;
+    margin-inline-start: 6%;
+    margin-top: 5%;
+}
+
+.block1 h2{
+    font-size: 6vw;
+    color: lightslategrey;
+    margin-top: 5%;
+}
+
+.block1 p{
+    font-size: 2vw;
+    color: darkslategrey;
+    align-items: center;
+    align-content: center;
+}
+
+.block2{
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.block2 h1{
+    font-size: 6vw;
+    color: darkslategrey;
+}
+
+.block2 h2{
+    font-size: 6vw;
+    color: lightslategrey;
+}
+
+.block2 p, li{
+    font-size: 2vw;
+    color: darkslategrey;
+    align-items: center;
+    align-content: center;
+}
+
+.block2 ul{
+    text-align: left;
+    list-style-position: inside;
+    display: inline-block;
+    font-size: 2vw;
+}
+
+.block3{
+    text-align: center;
+    align-items: center;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.block3 h2{
+    font-size: 6vw;
+    color: lightslategrey;
+}
+
+.block3 ol{
+    font-size: 2vw;
+    color: darkslategrey;
+    padding-right: 5%;
+}
+
+.block3 li{
+    margin: 3vw;
+    
+}
+
+.block3 img{
+    height: 25vw;
+    border: 0.8vw solid orange;
+}
+
+.video{
+    height: auto;
+    align-items: center;
+    margin: 5%;
+}
+
+.contact{
+    text-align: center;
+}
+
+.contact h1{
+        font-size: 6vw;
+        color: lightslategrey;
+        margin-top: 5%;
+}
+
+.contact p{
+    font-size: 2vw;
+    color: darkslategrey;
+    align-items: center;
+}
+
+.contact h2{
+    font-size: 4vw;
+    color: darkslategrey;
+    align-items: center;
+}
+
+.buy{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    margin: 5%;
+}
+
+.buy img{
+    height: 25vw;
+    border-radius: 10%;
+    border: 5px solid orange;
+    margin-left: 2%;
+}
+
+.buy h2{
+    font-size: 6vw;
+    color: lightslategrey;
+    margin-right: 2%;
+}
+
+.buy p{
+    font-size: 2vw;
+    color: darkslategrey;
+    align-items: center;
+    align-content: center;
+    margin-right: 2%;
+}
+
+/* Main PayPal container */
+.paypal {
+    display: flex;
+    justify-content: center; /* Center the PayPal buttons */
+    flex: 1 1 300px; /* Flexible width with a minimum of 300px */
+    max-width: 60%;
+    transform-origin: center; /* Set the origin for scaling */
+}
+
+/* Shrink the PayPal buttons when the screen size decreases */
+@media (max-width: 1100px) {
+    .paypal {
+        transform: scale(0.8); /* Shrink to 80% of the original size */
+    }
+}
+
+@media (max-width: 900px) {
+    .paypal {
+        transform: scale(0.6); /* Shrink to 80% of the original size */
+    }
+}
+
+/* Fix title positioning in portrait/vertical orientation - only affects portrait mode */
+@media (orientation: portrait) and (max-width: 768px) {
+    .title {
+        max-height: 60vh;
+    }
+    .titletext {
+        top: 10% !important;
+    }
+}
+
+@media (orientation: portrait) and (max-width: 480px) {
+    .title {
+        max-height: 55vh;
+    }
+    .titletext {
+        top: 8% !important;
+    }
+}
